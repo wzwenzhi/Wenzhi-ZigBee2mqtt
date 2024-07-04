@@ -15,7 +15,7 @@ module.exports = [{
 	}],
 	model: 'ZY-M100-24GV2',
 	vendor: 'TuYa',
-	description: '置一科技·执梦智能24G人体存在传感器',
+	description: '24G人体存在传感器',
 	fromZigbee: [tuya.fz.datapoints],
 	toZigbee: [tuya.tz.datapoints],
 	onEvent: legacy.onEventSetLocalTime,
