@@ -28,7 +28,7 @@ const definition = [
         toZigbee: [tuya.tz.datapoints, tzDatapoints],
         configure: tuya.configureMagicPacket,
         exposes: [
-            e.presence(), e.illuminance_lux(),
+            e.presence(), e.illuminance(),
             e.numeric('target_distance', ea.STATE).withDescription('Distance to target').withUnit('m'),
             e.numeric('radar_sensitivity', ea.STATE_SET).withValueMin(1).withValueMax(9).withValueStep(1)
                 .withDescription('Detection sensitivity level'),
@@ -74,7 +74,7 @@ const definition = [
                 [101, 'entry_filter_time', tuya.valueConverter.divideBy10],
                 [102, 'departure_delay', tuya.valueConverter.raw],
                 [103, 'cline', tuya.valueConverter.raw],
-                [104, 'illuminance_lux', tuya.valueConverter.divideBy10],
+                [104, 'illuminance', tuya.valueConverter.divideBy10],
                 [105, 'entry_sensitivity', tuya.valueConverter.raw],
                 [106, 'entry_distance_indentation', tuya.valueConverter.divideBy100],
                 [107, 'breaker_mode', tuya.valueConverterBasic.lookup({'standard': tuya.enum(0), 'local': tuya.enum(1)})],
